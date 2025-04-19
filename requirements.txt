@@ -1,2 +1,5 @@
-python-telegram-bot==20.3
-requests==2.31.0
+google==3.0.0
+telegram==0.0.1
+generativeai==0.0.1
+requests==2.32.3
+python-telegram-bot==21.10
