@@ -5,8 +5,8 @@ from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.ext import Application, CommandHandler, MessageHandler, CallbackQueryHandler, filters, ContextTypes
 
 # Configuration
-TELEGRAM_TOKEN = "7812351684:AAE_abX1KAD2R2rW9jGFUC6Gcx7py7iQsv8"  # Replace with your BotFather token
-GEMINI_API_KEY = "AIzaSyDqhJ36j9UB05kxOEGusaHl4Zub8TjZGXE"  # Replace with your Gemini API key
+TELEGRAM_TOKEN = "YOUR_BOT_TOKEN"  # Replace with your BotFather token
+GEMINI_API_KEY = "GEMINI_API_KEY"  # Replace with your Gemini API key
 GEMINI_API_URL = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent"
 
 # Track chat state
@@ -49,7 +49,7 @@ async def quit_callback(update: Update, context: ContextTypes.DEFAULT_TYPE):
 async def support_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     """Provide support link."""
     keyboard = [
-        [InlineKeyboardButton("Contact Support", url="https://t.me/MEHRDAD87ORG")]
+        [InlineKeyboardButton("Contact Support", url="https://t.me/YOUR_TELEGRAM_ID")]
     ]
     reply_markup = InlineKeyboardMarkup(keyboard)
     await update.message.reply_text(
@@ -96,7 +96,7 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
     # Check for specific queries
     if "who is your creator" in user_message or "who made you" in user_message or "سازنده تو کیست" in user_message or "تو را چه کسی ساخته" in user_message:
-        await update.message.reply_text("مهرداد اورنگ")
+        await update.message.reply_text("YOUR_NAME")
         return
 
     # Get response from Gemini
